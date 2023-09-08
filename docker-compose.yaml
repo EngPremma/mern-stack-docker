@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  api: # image's name
+    build: ./api # build image
+    container_name: api_c # run container
+    ports: # map port to local machine
+      - '4000:4000'
+    volumes: # map data to docker when file in local machine is change it reflex to container also
+      - ./api:/app
+      - /app/node_modules
+  myblog:
+    build: ./myblog
+    container_name: myblog_c
+    ports:
+      - '3000:3000'
+    stdin_open: true # start container in interractive mode
+    tty: true
