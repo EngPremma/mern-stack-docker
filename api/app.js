@@ -23,10 +23,6 @@ app.get('/', (req, res) => {
 			id: '4',
 			title: 'Eng Premma',
 		},
-		{
-			id: '3',
-			title:'ggwp'
-		}
 	]);
 });
 
